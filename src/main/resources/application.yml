@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    function:
+      definition: pageEventConsumer;pageEventSupplier;pageEventFunction
+    stream:
+      bindings:
+        pageEventConsumer-in-0:
+          destination: R1
+        pageEventSupplier-out-0:
+          destination: R2
+        pageEventFunction-in-0:
+          destination: R2
+        pageEventFunction-out-0:
+          destination: R3
+
