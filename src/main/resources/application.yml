@@ -1,7 +1,7 @@
 spring:
   cloud:
     function:
-      definition: pageEventConsumer;pageEventSupplier;pageEventFunction
+      definition: pageEventConsumer;pageEventSupplier;pageEventFunction;kStreamFunction
     stream:
       bindings:
         pageEventConsumer-in-0:
@@ -12,4 +12,8 @@ spring:
           destination: R2
         pageEventFunction-out-0:
           destination: R3
+        kStreamFunction-in-0:
+          destination: R2
+        kStreamFunction-out-0:
+          destination: R4
 
